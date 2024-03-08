@@ -24,7 +24,7 @@ public class Rectangle {
     public String afiseazaCuloareDreptunghi() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Introduceti o culoare: ");
-       this.culoare = scanner.next();
+        this.culoare = scanner.next();
         System.out.println("Culoarea Dreptunghiului este: " + culoare);
         return null;
     }

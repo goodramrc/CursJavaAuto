@@ -1,5 +1,7 @@
 package curs2;
 
+import java.util.Scanner;
+
 public class TestRectangle {
 
     public static void main(String[] args) {
@@ -15,17 +17,19 @@ public class TestRectangle {
         obiect2.lungime = 6;
         System.out.println(obiect2.calculArie(obiect2.latime, obiect2.lungime));
 */
-        Rectangle obiect3 = new Rectangle(8, 12);
-        System.out.println("Aria este: " + obiect3.calculArie());
-        //Apelare metoda afiseazaCuloareDreptunghi() pe un obiect existent
-        obiect3.afiseazaCuloareDreptunghi();
+//        Rectangle obiect3 = new Rectangle(8, 12);
+//        System.out.println("Aria este: " + obiect3.calculArie());
+//        //Apelare metoda afiseazaCuloareDreptunghi() pe un obiect existent
+//        obiect3.afiseazaCuloareDreptunghi();
 
         //Apelare metoda afiseazaCuloareDreptunghi() pe un obiect nou
-        Rectangle obiect4 = new Rectangle(8, 10 , obiect3.culoare) ;
-        //de ce nu pot accesa paremetrul culoare, folosind si obiect4.culoare ? La hover peste eroare, spune ca nu e initializat, dar obiect3.culoare cum de este initializat?
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduceti culoarea: ");
+        Rectangle obiect4 = new Rectangle(8, 10 , scanner.next());
         System.out.println("Latimea este:" + obiect4.latime);
         System.out.println("Lungimea este:" + obiect4.lungime);
-        obiect4.afiseazaCuloareDreptunghi();
+        System.out.println("Culoare este: " + obiect4.culoare);
+//        obiect4.afiseazaCuloareDreptunghi();
 
 
 
