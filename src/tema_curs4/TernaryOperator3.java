@@ -21,7 +21,7 @@ public class TernaryOperator3 {
         calificativ = valoarePunctaj <=0 ? "I" : valoarePunctaj < 80 ? "S" :
         valoarePunctaj >= 80 ? "B" : valoarePunctaj >= 90 ? "FB" : "";
         String mesaj = calificativ == "FB" ? "Ai primit: Foarte Bine" : calificativ == "B" ?
-                "Ai primit: Foarte Bine" : calificativ == "S" ? "Ai primit: Suficient" :calificativ == "I" ? "Punctaj invalid":"";
+                "Ai primit: Bine" : calificativ == "S" ? "Ai primit: Suficient" :calificativ == "I" ? "Punctaj invalid":"";
         System.out.println(mesaj);
     }
 

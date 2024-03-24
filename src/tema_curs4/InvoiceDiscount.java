@@ -16,8 +16,8 @@ public class InvoiceDiscount {
     public void applyDiscount() {
         askTheInvoiceValue();
         String result = (invoice <= 0) ? "Introduceti valori pozitive si diferite de 0" :
-                invoice > 100 ? "A fost aplicat un discount de 10%, iar valoarea facturii este: "
-                        + (invoice * 90 / 100) : (invoice < 100) ? "A fost aplicat un discount de 5%, iar valoarea facturii este: "
+                (invoice > 100) ? "A fost aplicat un discount de 10%, iar valoarea facturii este: "
+                        + (invoice * 90 / 100) : (invoice <= 100) ? "A fost aplicat un discount de 5%, iar valoarea facturii este: "
                 + (invoice * 95 / 100) : "Nu se aplica nici un discount";
         System.out.println(result);
     }
