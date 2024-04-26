@@ -17,10 +17,10 @@ public class BonusProgram {
         System.out.println("Introduceti valoarea vanzarilor: ");
         valoareVanzari = scaner.nextInt();
         scaner.nextLine();
-        do {
+        while (an==3 && lunaVanzari < 1 || lunaVanzari > 12) {
             System.out.println("Introduceti luna in care a fost efectuata vanzarea: ");
             lunaVanzari = scaner.nextInt();
-        } while (lunaVanzari < 1 || lunaVanzari > 12);
+        }
 
     }
 
@@ -40,7 +40,7 @@ public class BonusProgram {
                 if (valoareVanzari <= 5000) {
                     bonus = 600;
                 } else if (valoareVanzari <= 10000) {
-                    if (lunaVanzari > 1 && lunaVanzari <= 6) {
+                    if (lunaVanzari >= 1 && lunaVanzari <= 6) {
                         bonus = 800;
 
                     } else if (lunaVanzari >= 7 && lunaVanzari <= 11) {
