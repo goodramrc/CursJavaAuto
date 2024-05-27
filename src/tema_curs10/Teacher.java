@@ -27,15 +27,4 @@ public class Teacher {
         return schedule;
     }
 
-    public void setCourse(String course) {
-        this.course = course;
-    }
-
-    public void setExperienceYears(int experienceYears) {
-        this.experienceYears = experienceYears;
-    }
-
-    public void setSchedule(String schedule) {
-        this.schedule = schedule;
-    }
 }

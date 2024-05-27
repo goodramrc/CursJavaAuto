@@ -2,45 +2,37 @@ package tema_curs10;
 
 import java.util.Scanner;
 
+
 public class Qualification extends Teacher {
 
+    private static Scanner scanner = new Scanner(System.in);
 
-    public Qualification(String course, int experienceYears, String schedule) {
-        super(course, experienceYears, schedule);
+    public Qualification() {
+        super(readCourse(), readExperienceYears(), readSchedule());
     }
 
-    public void readVericationParameters(){
-
-        Scanner scanner = new Scanner(System.in);
-
+    private static String readCourse() {
         System.out.println("Enter the name of the course you want to teach: ");
-        String course = scanner.nextLine();
+        return scanner.nextLine();
+    }
 
-
-        System.out.println("What are the total years of experience with " + course + " ?");
+    private static int readExperienceYears() {
+        System.out.println("What are the total years of experience with the course?");
         int experienceYears = scanner.nextInt();
         scanner.nextLine();
+        return experienceYears;
+    }
 
-        System.out.println("What is your available schedule to teach ? ");
-        String schedule = scanner.nextLine();
-
-        scanner.close();
-
-        setCourse(course);
-        setExperienceYears(experienceYears);
-        setSchedule(schedule);
-
+    private static String readSchedule() {
+        System.out.println("What is your available schedule to teach?");
+        return scanner.nextLine();
     }
 
     public void verify() {
-        readVericationParameters();
-
-        if(getExperienceYears() >3 && getCourse().equals("Java") && getSchedule().equals("Afternoon")) {
+        if (getExperienceYears() > 3 && getCourse().equalsIgnoreCase("Java") && getSchedule().equalsIgnoreCase("Afternoon")) {
             System.out.println("You qualify to teach at this school!");
-        }else{
+        } else {
             System.out.println("You do not qualify!");
         }
-
-
     }
 }
